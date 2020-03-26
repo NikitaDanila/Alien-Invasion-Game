@@ -11,11 +11,12 @@ class Ship:
 
         # Load the ship image and get its rect
         self.image = pygame.image.load('images/ship.bmp')
+        # Resizing image
+        self.image = pygame.transform.scale(self.image, (60, 105))
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom centre of the screen.
         self.rect.midbottom = self.screen_rect.midbottom
-
 
 
     def blitme(self):
