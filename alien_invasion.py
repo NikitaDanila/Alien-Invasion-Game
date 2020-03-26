@@ -1,3 +1,4 @@
+"""This is my game and main file"""
 import sys
 
 import pygame
@@ -14,7 +15,8 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
 
-        self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
+        self.screen = pygame.display.set_mode(
+            (self.settings.screen_width, self.settings.screen_height))
 
         pygame.display.set_caption("Alien Invasion")
 
@@ -26,7 +28,6 @@ class AlienInvasion:
             self._check_events()
             self._update_screen()
 
-
     def _check_events(self):
         """Responds to keypresses and mouse movements"""
         for event in pygame.event.get():
@@ -34,7 +35,7 @@ class AlienInvasion:
                 sys.exit()
 
     def _update_screen(self):
-        """Updates images on the scrren, and flip to the new screen"""
+        """Updates images on the screen, and flip to the new screen"""
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
 
@@ -45,4 +46,3 @@ if __name__ == '__main__':
     # Make a game instance and run the game.
     ai = AlienInvasion()
     ai.run_game()
-
