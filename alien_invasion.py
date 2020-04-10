@@ -18,7 +18,7 @@ class AlienInvasion:
 
         # self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.screen = pygame.display.set_mode((self.settings.screen_width,
-                                                self.settings.screen_height))
+            self.settings.screen_height))
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
 
@@ -54,7 +54,7 @@ class AlienInvasion:
         if event.key == pygame.K_d:
             self.ship.moving_right = True
         elif event.key == pygame.K_a:
-             self.ship.moving_left = True
+            self.ship.moving_left = True
         elif event.key == pygame.K_q or event.key == pygame.K_ESCAPE:
             sys.exit()
         elif event.key == pygame.K_SPACE:
